@@ -71,7 +71,7 @@ def main(_):
 	# [#images, 10]. Each row will be the probabilities
 	# that the image for that row is any of the 10 classes.
 	# then we add the bias, a 10-element row vector.
-	y = tf.nn.softmax(tf.matmul(x, W) + b)
+	y = tf.matmul(x, W) + b
 
 
 	# Our cost function, the cross-entropy function
