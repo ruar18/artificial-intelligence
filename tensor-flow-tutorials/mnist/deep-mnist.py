@@ -26,6 +26,7 @@ def bias_variable(shape):
 def conv2d(x, W):
     # We're moving our filter one row/column at the time
     # Padding will ensure that the output size is the same as input size
+    # Side note: convolution is probably O(n log n) (optimized using FFt)
     return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
 
 # Pooling layer: pick the max neuron from every 2x2 block
